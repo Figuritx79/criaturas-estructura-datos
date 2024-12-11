@@ -57,6 +57,5 @@ public class CreateData {
     public static void main(String[] args) {
         documentData("creature.csv");
 
-        Creature.trainKnn("./creature.csv");
     }
 }
