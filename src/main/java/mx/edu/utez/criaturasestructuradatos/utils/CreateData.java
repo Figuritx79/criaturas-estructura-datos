@@ -24,11 +24,15 @@ public class CreateData {
                     writer.newLine();
                 }
                 String name = names.get(new Random().nextInt(4));
-                var wings = (name.equals("Voladores")) ? true : false;
-                var fly = (name.equals("Voladores")) ? true : false;
-                Creature newCreature = new Creature(name, new Random().nextInt(4), wings, fly, new Random().nextInt(11),
-                        new Random().nextInt(11), new Random().nextInt(11), new Random().nextInt(11),
-                        new Random().nextInt(11), new Random().nextInt(4));
+                var wings = (name.equals("Voladores")) ? 1 : 0;
+                var fly = (name.equals("Voladores")) ? 1 : 0;
+                Creature newCreature = new Creature(name, new Random().nextInt(3) + 1, wings, fly,
+                        new Random().nextInt(11),
+                        new Random().nextInt(11),
+                        new Random().nextInt(11),
+                        new Random().nextInt(11),
+                        new Random().nextInt(11),
+                        new Random().nextInt(3) + 1);
                 writer.write(newCreature.getName() + ",");
                 writer.write(newCreature.getSize() + ",");
                 writer.write(newCreature.isWings() + ",");
@@ -38,7 +42,7 @@ public class CreateData {
                 writer.write(newCreature.getEnergy() + ",");
                 writer.write(newCreature.getHealth() + ",");
                 writer.write(newCreature.getIntelligene() + ",");
-                writer.write(newCreature.getWeight() + ",");
+                writer.write(newCreature.getWeight() + "");
                 writer.newLine();
 
             }
@@ -52,5 +56,7 @@ public class CreateData {
 
     public static void main(String[] args) {
         documentData("creature.csv");
+
+        Creature.trainKnn("./creature.csv");
     }
 }

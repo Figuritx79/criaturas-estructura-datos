@@ -8,8 +8,8 @@ La clase que representa a las criaturas y tiene 10 atributos de clase
 
 1. Nombre: es el nombre el cual puede ser Terrestres, Marinos, Voladores o Anfibios.
 2. Tamano: es el tamano que tiene. SI es 1 es pequeno, 2 mediano y 3 grande (1-3).
-3. Alas: es si tiene alas es **Verdadero** o **Falso**.
-4. Vuela: es si puede volar es **Verdadero** 0 **Falso**.
+3. Alas: es si tiene alas es **Verdadero** o **Falso** (1 o 0).
+4. Vuela: es si puede volar es **Verdadero** 0 **Falso** (1 o 0).
 5. Fuerza: la fuerza con la que cuenta(1-10).
 6. Velocidad: la velocidad con la que cuenta el bicho :feet: (1-10).
 7. Energia: es la energia del bicho :ant: (1-10).
