@@ -53,15 +53,15 @@ public class CreateData {
 
     }
 
-    public static void main(String[] args) {
-        documentData("creature.csv");
-        ArrayList<Creature> dataSet = CsvReader.trainKnn("creature.csv");
-        Creature target = new Creature("Unknow", 3, 1, 0, 10, 5, 3, 7, 9, 1);
-
-        var k = 6;
-        var predictedType = Knn.classify(target, dataSet, k);
-
-        System.out.println("Tu criatura se parace a : " + predictedType);
-
-    }
+//    public static void main(String[] args) {
+//        documentData("creature.csv");
+//        ArrayList<Creature> dataSet = CsvReader.trainKnn("creature.csv");
+//        Creature target = new Creature("Unknow", 3, 1, 0, 10, 5, 3, 7, 9, 1);
+//
+//        var k = 6;
+//        var predictedType = Knn.classify(target, dataSet, k);
+//
+//        System.out.println("Tu criatura se parace a : " + predictedType);
+//
+//    }
 }
