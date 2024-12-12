@@ -27,8 +27,6 @@ public class CsvReader {
                         Integer.parseInt(values[6]), Integer.parseInt(values[7]), Integer.parseInt(values[8]),
                         Integer.parseInt(values[9]));
                 fileCreatures.add(creature);
-
-                System.out.println(creature.toString());
             }
         } catch (IOException e) {
             e.printStackTrace();

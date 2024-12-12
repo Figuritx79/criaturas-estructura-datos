@@ -25,8 +25,7 @@ public class CreateData {
                 }
                 String name = names.get(new Random().nextInt(4));
                 var wings = (name.equals("Voladores")) ? 1 : 0;
-                var fly = (name.equals("Voladores")) ? 1 : 0;
-                Creature newCreature = new Creature(name, new Random().nextInt(3) + 1, wings, fly,
+                Creature newCreature = new Creature(name, new Random().nextInt(3) + 1, wings, new Random().nextInt(2),
                         new Random().nextInt(11),
                         new Random().nextInt(11),
                         new Random().nextInt(11),
@@ -56,6 +55,13 @@ public class CreateData {
 
     public static void main(String[] args) {
         documentData("creature.csv");
+        ArrayList<Creature> dataSet = CsvReader.trainKnn("creature.csv");
+        Creature target = new Creature("Unknow", 3, 1, 0, 10, 5, 3, 7, 9, 1);
+
+        var k = 6;
+        var predictedType = Knn.classify(target, dataSet, k);
+
+        System.out.println("Tu criatura se parace a : " + predictedType);
 
     }
 }

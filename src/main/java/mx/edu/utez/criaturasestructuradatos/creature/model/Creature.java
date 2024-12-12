@@ -163,4 +163,8 @@ public class Creature {
                 + intelligene + ", weight=" + weight + "]";
     }
 
+    public int[] getFeatures() {
+        return new int[] { size, wings, fly, strength, speed, energy, health, intelligene, weight };
+    }
+
 }
